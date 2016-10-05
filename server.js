@@ -7,7 +7,7 @@ function start(route, handle) {
   function onRequest(request, response) {
     var pathname = url.parse(request.url).pathname;
     var paras = url.parse(request.url, true).query;
-    console.log(pathname);
+    util.log(pathname);
     route(handle, pathname, response, request, paras);
   }
   util.log("listen: localhost:8001");
